@@ -1,24 +1,25 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "mukeshtilokani/laravel-remote",
+    "description": "Execute Artisan commands on remote servers",
     "keywords": [
-        ":vendor_name",
+        "mukeshtilokani",
         "laravel",
-        ":package_slug"
+        "laravel-remote"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/mukeshtilokani/laravel-remote",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Mukesh Tilokani",
+            "email": "mukeshtilokani@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.0",
+        "illuminate/contracts": "^8.73",
         "spatie/laravel-package-tools": "^1.9.2",
-        "illuminate/contracts": "^8.73"
+        "spatie/ssh": "^1.7"
     },
     "require-dev": {
         "nunomaduro/collision": "^5.10",
@@ -34,13 +35,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "mukeshtilokani\\Remote\\": "src",
+            "mukeshtilokani\\Remote\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "mukeshtilokani\\Remote\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -54,11 +55,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
-            ],
-            "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
-            }
+                "mukeshtilokani\\Remote\\RemoteServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",

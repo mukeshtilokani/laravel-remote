@@ -1,7 +1,7 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace mukeshtilokani\Remote;
 
-class Skeleton
+class Remote
 {
 }

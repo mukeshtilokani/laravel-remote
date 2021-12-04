@@ -1,19 +1,27 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace mukeshtilokani\Remote\Commands;
 
 use Illuminate\Console\Command;
+use Spatie\Ssh\Ssh;
 
-class SkeletonCommand extends Command
+class RemoteCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'remote {command}';
 
-    public $description = 'My command';
+    public $description = 'Execute commands on a remote server';
 
     public function handle(): int
     {
-        $this->comment('All done');
+        $process = Ssh::create('mukesh', '203.109.103.178')
+                        ->onOutput(function($type, $line) {
+                            echo $line;
+                        })
+                        ->execute($this->getCommandToExeute());
+    }
 
-        return self::SUCCESS;
+    protected function getCommandToExecute(): string
+    {
+        return $this->argument('command');
     }
 }
