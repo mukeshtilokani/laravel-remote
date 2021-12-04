@@ -14,7 +14,7 @@ class RemoteCommand extends Command
     public function handle(): int
     {
         $process = Ssh::create('mukesh', '203.109.103.178')
-                        ->onOutput(function($type, $line) {
+                        ->onOutput(function ($type, $line) {
                             echo $line;
                         })
                         ->execute($this->getCommandToExeute());
