@@ -2,9 +2,9 @@
 
 namespace mukeshtilokani\Remote;
 
+use mukeshtilokani\Remote\Commands\RemoteCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use mukeshtilokani\Remote\Commands\RemoteCommand;
 
 class RemoteServiceProvider extends PackageServiceProvider
 {

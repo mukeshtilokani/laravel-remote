@@ -3,8 +3,8 @@
 namespace mukeshtilokani\Remote\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use mukeshtilokani\Remote\RemoteServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
